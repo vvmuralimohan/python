@@ -7,8 +7,6 @@ import os
 env.user = 'murali'
 env.password = 'mohan'
 
-# file = open('sids.txt', 'w')
-
 sidfile_array = []
 
 def readfile():
