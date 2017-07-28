@@ -1,0 +1,50 @@
+#! /usr/bin/env python
+#def hello():
+#        print('Hello world, Tecmint community')
+from fabric.api import env, run, hide, sudo, settings
+env.hosts = ['192.168.56.101','192.168.56.102','192.168.56.103','192.168.56.104']
+env.user = 'murali'
+env.password = 'mohan'
+
+def srvstp():
+    with settings(hide('stdout','stderr','output','warnings','running'),warn_only=True):
+         result = sudo('/home/smaadm/stop.sh', user='smaadm')
+         if result.return_code == 0: 
+#            print ("%s  Worked fine" %(env.host))
+	    for line in result.splitlines():
+#                print ("Stopped services successfully on : %s with %s message" %(env.host, line))
+                print ("Stopped services successfully on : %s" %(env.host))
+         else:
+	    for line in result.splitlines():
+                print ("Not able to stop services on %s server. Due to ERRORS: %s " %(env.host, line))
+#            print ("%s  Not worked due to %d" %(env.host,result.return_code))
+
+def disk_space():
+    run('df -TPh')
+
+def mydisks():
+    run('fdisk -l')
+
+#sudo(command, user=sudouser)
+
+# Return the output
+#result = sudo("ls -l /var/www")
+# Create a directory
+#sudo("mkdir /var/www")
+
+# Create a directory as another user
+#sudo("mkdir /var/www/web-app-one", user="web-admin")
+# Prompt the user with defaults and validation
+# port_number = prompt("Which port?", default=42, validate=int)
+# Reboot after 30 seconds
+# reboot(wait=30)
+# The *cd* context manager makes enwrapped command's
+# execution relative to the stated path (i.e. "/tmp/trunk")
+# with cd("/tmp/trunk"):
+#    items = sudo("ls -l")
+
+# It is possible to "chain" context managers
+# The run commands gets executed, therefore at "/tmp/trunk"
+# with cd("/tmp"):
+#    with cd("/trunk"):
+#        run("ls")

@@ -1,0 +1,40 @@
+[192.168.56.101] Executing task 'srvstp'
+[192.168.56.101] sudo: /home/smaadm/stop.sh
+[192.168.56.101] out: sudo: unknown user: smaadm
+[192.168.56.101] out: sudo: unable to initialize policy plugin
+[192.168.56.101] out: 
+
+Not able to stop services on these servers. Due to 
+ ERRORS: sudo: unknown user: smaadm 
+Not able to stop services on these servers. Due to 
+ ERRORS: sudo: unable to initialize policy plugin 
+[192.168.56.102] Executing task 'srvstp'
+[192.168.56.102] sudo: /home/smaadm/stop.sh
+[192.168.56.102] out: sudo password:
+[192.168.56.102] out: SMAADM  STOPPED
+[192.168.56.102] out: 
+
+Stopped services successfully on : SMAADM  STOPPED 
+[192.168.56.103] Executing task 'srvstp'
+[192.168.56.103] sudo: /home/smaadm/stop.sh
+[192.168.56.103] out: sudo password:
+[192.168.56.103] out: SMAADM  STOPPED
+[192.168.56.103] out: 
+
+Stopped services successfully on : SMAADM  STOPPED 
+[192.168.56.104] Executing task 'srvstp'
+[192.168.56.104] sudo: /home/smaadm/stop.sh
+[192.168.56.104] out: sudo: unknown user: smaadm
+[192.168.56.104] out: sudo: unable to initialize policy plugin
+[192.168.56.104] out: 
+
+Not able to stop services on these servers. Due to 
+ ERRORS: sudo: unknown user: smaadm 
+Not able to stop services on these servers. Due to 
+ ERRORS: sudo: unable to initialize policy plugin 
+
+Done.
+Disconnecting from 192.168.56.101... done.
+Disconnecting from 192.168.56.102... done.
+Disconnecting from 192.168.56.103... done.
+Disconnecting from 192.168.56.104... done.
